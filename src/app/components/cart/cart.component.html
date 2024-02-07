@@ -1,0 +1,14 @@
+<div class="row  d-flex ">
+    <div class="card" style="width: 18rem;" *ngFor="let item of P">
+      <img [src]="item.Img" class="card-img-top" [alt]="item.Name">
+      <div class="card-body">
+  
+        <p class="card-text">{{ item.ID }} </p>
+        <p class="card-text">{{ item.Name }} </p>
+      <p class="card-text">{{ item.ICategory }} </p>
+      <p class="card-text">{{ item.ClientName }} </p>
+      <p class="card-text">{{ item.ProductList }} </p>
+  
+    </div>
+  </div>
+  </div>

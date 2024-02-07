@@ -1,0 +1,73 @@
+<div class="container">
+
+
+  <form [formGroup]="form" (ngSubmit)="send()">
+
+  <div class="mb-3">
+    <label for="exampleInputNAME" class="form-label">NAME </label>
+  <input type="NAME" class="form-control" 
+  [ngClass]="{
+    'is-invalid':form.controls['name'].invalid && form.controls['name'].touched,
+    'is-valid':form.controls['name'].valid && form.controls['name'].touched
+  }" >
+  <div *ngIf="form.controls['name'].invalid &&form.controls['name'].touched " class="invalid-feedback">
+  <span>please write fill he feailds </span>
+  </div>
+  <div *ngIf="form.controls['name'].valid &&form.controls['name'].touched " class="valid-feedback">
+    <span> good job </span>
+    </div>
+  
+</div>
+
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+  <input type="email" class="form-control"   [ngClass]="{
+    'is-invalid':form.controls['email'].invalid && form.controls['email'].touched,
+    'is-valid':form.controls['email'].valid && form.controls['email'].touched
+  }"  >
+   <div *ngIf="form.controls['email'].invalid &&form.controls['email'].touched " class="invalid-feedback">
+    <span>please fill he feailds </span>
+    </div>
+    <div *ngIf="form.controls['email'].valid &&form.controls['email'].touched " class="valid-feedback">
+      <span> good job </span>
+      </div>
+</div>
+
+
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="name" class="form-control"  [ngClass]="{
+      'is-invalid':form.controls['password'].invalid && form.controls['password'].touched,
+      'is-valid':form.controls['password'].valid && form.controls['password'].touched
+    }" >
+     <div *ngIf="form.controls['password'].invalid &&form.controls['password'].touched " class="invalid-feedback">
+      <span>please write fill he feailds </span>
+      </div>
+      <div *ngIf="form.controls['password'].valid &&form.controls['password'].touched " class="valid-feedback">
+        <span> good job </span>
+        </div>
+  </div>
+
+
+  <div class="mb-3">
+    <label for="exampleInputphone" class="form-label">phone number </label>
+    <input type="number" class="form-control"   [ngClass]="{
+      'is-invalid':form.controls['phoneNumber'].invalid && form.controls['phoneNumber'].touched,
+      'is-valid':form.controls['phoneNumber'].valid && form.controls['phoneNumber'].touched
+    }" >
+     <div *ngIf="form.controls['phoneNumber'].invalid &&form.controls['phoneNumber'].touched " class="invalid-feedback">
+      <span>please write fill he feailds </span>
+      </div>
+      <div *ngIf="form.controls['phoneNumber'].valid &&form.controls['phoneNumber'].touched " class="valid-feedback">
+        <span> good job </span>
+        </div>
+  </div>
+  
+  <button type="submit"  class="btn btn-primary">Submit</button>
+</form>
+
+  </div>
+
+
